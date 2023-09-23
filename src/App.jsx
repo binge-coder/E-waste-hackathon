@@ -5,7 +5,7 @@ function App() {
 
   return (
     <>
-      this website is under development
+      <div className='text-green-500 font-bold'>this website is under development</div>
     </>
   )
 }

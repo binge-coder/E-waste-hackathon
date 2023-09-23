@@ -3,6 +3,7 @@
 - install npm and node : https://www.freecodecamp.org/news/how-to-install-node-js-and-npm-on-windows-2/
 - github desktop app (this is recommended... unless you are okay with typing git commands in your terminal). 
 - You must know basic git concepts like fork, clone, commit, pull requests, etc. If you don't know this then just take a crash course or something.
+## See this before anything
 - quickly read this: https://medium.com/@jonathanmines/the-ultimate-github-collaboration-guide-df816e98fb67
 
 ## Get started
