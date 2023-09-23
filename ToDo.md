@@ -1,0 +1,3 @@
+- Add website icon (titlebar)
+- add logo in navbar
+- 

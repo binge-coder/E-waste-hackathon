@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import { Link } from 'react-router-dom'
 import { FaBars , FaTimes } from "react-icons/fa"
 
 const navlinks = [
@@ -12,7 +13,7 @@ const navlinks = [
     },
     {
         title: "Credit Calculator",
-        link: "/credit_calculator",
+        link: "/credit_calc",
     },
     {
         title: "About",
@@ -39,7 +40,7 @@ const Navbar = () => {
                 <div className='hidden md:block'>
                     <div className='ml-10 flex items-baseline space-x-4'>
                         {navlinks.map((myLink,index) => (
-                            <a key={index} className='text-gray-300 transition-all duration-500 hover:bg-gray-600 hover:text-white px-3 py-2 rounded-md text-md font-medium' href={myLink.link}>{myLink.title}</a>
+                            <Link key={index} className='text-gray-300 transition-all duration-500 hover:bg-gray-600 hover:text-white px-3 py-2 rounded-md text-md font-medium' to={myLink.link}>{myLink.title}</Link>
                         )
                         )}
                     </div>
@@ -58,7 +59,7 @@ const Navbar = () => {
             <div className='md:hidden'>
                 <div className='px-2 py-4 space-y-1 sm:px-3'>
                 {navlinks.map((myLink,index) => (
-                            <a key={index} className='block  text-gray-300 hover:bg-gray-700 hover:text-white text-center py-5 rounded-md text-base font-medium' href={myLink.link}>{myLink.title}</a>
+                            <Link key={index} className='block  text-gray-300 hover:bg-gray-700 hover:text-white text-center py-5 rounded-md text-base font-medium' to={myLink.link}>{myLink.title}</Link>
                         )
                         )}
                 </div>
