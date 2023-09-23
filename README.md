@@ -22,5 +22,5 @@ npm run dev
 http://localhost:5173/
 ```
 - you can see the changes you make to the file in real time (its recommended to turn on **autosave** in vscode)
-- push changes to remote branch once your done (fancy way of saying push you code to online github storage, very easy to do with github desktop)
+- push changes to remote branch once you're done (fancy way of saying push you code to online github storage, very easy to do with github desktop)
 
