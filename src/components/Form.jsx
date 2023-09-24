@@ -89,7 +89,7 @@ const Form = () => {
       </div>
       {/* Submit button */}
       <button
-        type="submit" className='w-28 uppercase transition-all duration-500 border-tertiary text-red-800 border-b-4 ring-1 ring-tertiary hover:border-0 hover:bg-secondary hover:text-stroke-dark px-3 py-2 rounded-md text-sm font-medium bg-highlight'
+        type="submit" className='w-28 uppercase transition-all duration-500 border-white text-stroke-light border-b-4 ring-1 ring-secondary hover:border-0 hover:bg-secondary hover:text-stroke-dark px-3 py-2 rounded-md text-sm font-medium '
       >
         Submit
       </button>
