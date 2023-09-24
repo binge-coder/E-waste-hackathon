@@ -3,10 +3,8 @@ import React, { useState } from 'react';
 const Form = () => {
   // State to manage form data
   const [formData, setFormData] = useState({
-    state: '',
-    city: '',
-    pinCode: '',
-    radius: '15km', // Initialize the radius with the default value
+    modelNumber: '',
+    devType: 'Mobile', // Initialize the radius with the default value
   });
 
   // Handle form input changes
@@ -52,58 +50,35 @@ const Form = () => {
           }
         `}
       </style>
-      {/* Input field for State */}
+      {/* Dropdown for Device Type */}
       <div className="mb-4 w-full center-input">
-        <label className="block text-sm font-medium text-stroke-light">State:</label>
-        <input
-          type="text"
-          name="state" 
-          value={formData.state}
-          onChange={handleChange}
-          className="border border-gray-300 p-2 rounded-md w-full narrow-input small-font"
-          required
-        />
-      </div>
-      {/* Input field for City */}
-      <div className="mb-4 w-full center-input">
-        <label className="block text-sm font-medium text-stroke-light">City:</label>
-        <input
-          type="text"
-          name="city" 
-          value={formData.city}
-          onChange={handleChange}
-          className="border border-gray-300 p-2 rounded-md w-full narrow-input small-font"
-          required
-        />
-      </div>
-      {/* Input field for Pin Code */}
-      <div className="mb-4 w-full center-input">
-        <label className="block text-sm font-medium text-stroke-light">Pin Code:</label>
-        <input
-          type="text"
-          name="pinCode"
-          value={formData.pinCode}
-          onChange={handleChange}
-          className="border border-gray-300 p-2 rounded-md w-full narrow-input small-font"
-          required
-        />
-      </div>
-      {/* Dropdown for Find Nearest within */}
-      <div className="mb-4 w-full center-input">
-        <label className="block text-sm font-medium text-stroke-light">Find Nearest within:</label>
+        <label className="block text-sm font-medium text-stroke-light">Device Type:</label>
         <select
-          name="radius"
-          value={formData.radius}
+          name="devType"
+          value={formData.devType}
           onChange={handleChange}
           className="border border-gray-300 p-2 rounded-md w-full narrow-input small-font"
         >
-          <option value="15km">15km</option>
-          <option value="30km">30km</option>
-          <option value="45km">45km</option>
-          <option value="50km">50km</option>
-          <option value="None">None</option>
+          <option value="Mobile">Mobile</option>
+          <option value="Television">Television</option>
+          <option value="Tablet">Tablet</option>
+          <option value="Desktop">Desktop</option>
         </select>
       </div>
+      {/* Input field for modelNumber */}
+      <div className="mb-4 w-full center-input">
+        <label className="block text-sm font-medium text-stroke-light">Model Number:</label>
+        <input
+          type="text"
+          name="modelNumber"
+          value={formData.modelNumber}
+          onChange={handleChange}
+          className="border border-gray-300 p-2 rounded-md w-full narrow-input small-font"
+          required
+        />
+      </div>
+      
+      
       {/* Submit button */}
       <button
         type="submit" className='w-28 uppercase transition-all duration-500 border-white text-stroke-light border-b-4 ring-1 ring-secondary hover:border-0 hover:bg-secondary hover:text-stroke-dark px-3 py-2 rounded-md text-sm font-medium '
@@ -115,3 +90,4 @@ const Form = () => {
 };
 
 export default Form;
+// className="bg-primary text-white px-4 py-3 rounded-md hover:bg-secondary w-full submit-button"
