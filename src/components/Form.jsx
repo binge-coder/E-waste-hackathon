@@ -53,7 +53,7 @@ const Form = () => {
       </style>
       {/* Input field for Name */}
       <div className="mb-4 w-full center-input">
-        <label className="block text-sm font-medium text-gray-700">Name:</label>
+        <label className="block text-sm font-medium text-stroke-light">Name:</label>
         <input
           type="text"
           name="name"
@@ -65,7 +65,7 @@ const Form = () => {
       </div>
       {/* Input field for City */}
       <div className="mb-4 w-full center-input">
-        <label className="block text-sm font-medium text-gray-700">City:</label>
+        <label className="block text-sm font-medium text-stroke-light">City:</label>
         <input
           type="text"
           name="City"
@@ -77,7 +77,7 @@ const Form = () => {
       </div>
       {/* Input field for Pin Code */}
       <div className="mb-4 w-full center-input">
-        <label className="block text-sm font-medium text-gray-700">Pin Code:</label>
+        <label className="block text-sm font-medium text-stroke-light">Pin Code:</label>
         <input
           type="text"
           name="pinCode"
