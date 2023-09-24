@@ -25,7 +25,9 @@ export default {
         'highlight': {
           DEFAULT: '#f9bc60'
         }
-
+      },
+      fontFamily: {
+        prata: 'Prata'
       }
     },
   },
