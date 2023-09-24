@@ -40,7 +40,7 @@ const Navbar = () => {
                 <div className='hidden md:block'>
                     <div className='ml-10 flex items-baseline space-x-4'>
                         {navlinks.map((myLink,index) => (
-                            <Link key={index} className='text-stroke-light transition-all duration-500 ring-1 ring-secondary hover:border-0 hover:bg-secondary hover:text-stroke-dark px-3 py-2 rounded-md text-md font-medium' to={myLink.link}>{myLink.title}</Link>
+                            <Link key={index} className='text-stroke-light transition-all duration-500 border-b-4 ring-1 ring-secondary hover:border-0 hover:bg-secondary hover:text-stroke-dark px-3 py-2 rounded-md text-md font-medium' to={myLink.link}>{myLink.title}</Link>
                         )
                         )}
                     </div>
