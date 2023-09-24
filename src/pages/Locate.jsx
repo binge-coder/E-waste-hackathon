@@ -1,5 +1,5 @@
 import React from 'react';
-import Form from '../components/Form'; // Import the Form component
+import Form from '../components/Form_Loc'; // Import the Form component
 
 const Locate = () => {
   return (
@@ -25,7 +25,7 @@ const Locate = () => {
         </div>
         
         {/* Right Section */}
-        <div className="flex-1 flex flex-col items-center justify-center bg-gray-200 rounded-lg p-4 md:max-w-2xl">
+        <div className="flex-1 flex flex-col items-center justify-center bg-gray-200 rounded-lg p-4 md:max-w-3xl">
           <div className="w-full h-full">
             {/* Image */}
             <img

@@ -51,13 +51,17 @@ const Form = () => {
           }
         `}
       </style>
-      {/* Input field for Name */}
+      {/* Input field for State */}
       <div className="mb-4 w-full center-input">
+<<<<<<< Updated upstream:src/components/Form.jsx
         <label className="block text-sm font-medium text-gray-700">Name:</label>
+=======
+        <label className="block text-sm font-medium text-stroke-light">State:</label>
+>>>>>>> Stashed changes:src/components/Form_Loc.jsx
         <input
           type="text"
-          name="name"
-          value={formData.name}
+          name="State"
+          value={formData.state}
           onChange={handleChange}
           className="border border-gray-300 p-2 rounded-md w-full narrow-input small-font"
           required
@@ -69,7 +73,7 @@ const Form = () => {
         <input
           type="text"
           name="City"
-          value={formData.City}
+          value={formData.city}
           onChange={handleChange}
           className="border border-gray-300 p-2 rounded-md w-full narrow-input small-font"
           required
@@ -86,6 +90,22 @@ const Form = () => {
           className="border border-gray-300 p-2 rounded-md w-full narrow-input small-font"
           required
         />
+      </div>
+       {/* Dropdown for Find Nearest within */}
+       <div className="mb-4 w-full center-input">
+        <label className="block text-sm font-medium text-stroke-light">Find Nearest within:</label>
+        <select
+          name="radius"
+          value={formData.radius}
+          onChange={handleChange}
+          className="border border-gray-300 p-2 rounded-md w-full narrow-input small-font"
+        >
+          <option value="15km">15km</option>
+          <option value="30km">30km</option>
+          <option value="45km">45km</option>
+          <option value="50km">50km</option>
+          <option value="None">None</option>
+        </select>
       </div>
       {/* Submit button */}
       <button
