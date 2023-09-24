@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 const Form = () => {
   // State to manage form data
   const [formData, setFormData] = useState({
-    name: '',
-    City: '',
+    state: '',
+    city: '',
     pinCode: '',
   });
 
@@ -53,11 +53,11 @@ const Form = () => {
       </style>
       {/* Input field for Name */}
       <div className="mb-4 w-full center-input">
-        <label className="block text-sm font-medium text-stroke-light">Name:</label>
+        <label className="block text-sm font-medium text-stroke-light">State:</label>
         <input
           type="text"
-          name="name"
-          value={formData.name}
+          name="State"
+          value={formData.state}
           onChange={handleChange}
           className="border border-gray-300 p-2 rounded-md w-full narrow-input small-font"
           required
@@ -69,7 +69,7 @@ const Form = () => {
         <input
           type="text"
           name="City"
-          value={formData.City}
+          value={formData.city}
           onChange={handleChange}
           className="border border-gray-300 p-2 rounded-md w-full narrow-input small-font"
           required
@@ -86,6 +86,22 @@ const Form = () => {
           className="border border-gray-300 p-2 rounded-md w-full narrow-input small-font"
           required
         />
+      </div>
+      {/* Dropdown for Find Nearest within */}
+      <div className="mb-4 w-full center-input">
+        <label className="block text-sm font-medium text-stroke-light">Find Nearest within:</label>
+        <select
+          name="radius"
+          value={formData.radius}
+          onChange={handleChange}
+          className="border border-gray-300 p-2 rounded-md w-full narrow-input small-font"
+        >
+          <option value="15km">15km</option>
+          <option value="30km">30km</option>
+          <option value="45km">45km</option>
+          <option value="50km">50km</option>
+          <option value="None">None</option>
+        </select>
       </div>
       {/* Submit button */}
       <button
