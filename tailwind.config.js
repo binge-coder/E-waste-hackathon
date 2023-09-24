@@ -27,7 +27,7 @@ export default {
         }
       },
       fontFamily: {
-        prata: 'Prata'
+        alpha: 'Rubik'
       }
     },
   },

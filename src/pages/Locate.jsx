@@ -10,10 +10,10 @@ const Locate = () => {
           <div className="flex flex-col h-full justify-center">
             {/* Top one-third for text */}
             <div className="h-1/3">
-              <p className="text-4xl md:text-6xl lg:text-7xl mb-2 font-prata">
+              <p className="text-4xl md:text-6xl lg:text-7xl mb-2 ">
                 Locate
               </p>
-              <p className="text-4xl md:text-6xl lg:text-7xl font-prata">Nearest Facility</p>
+              <p className="text-4xl md:text-6xl lg:text-7xl ">Nearest Facility</p>
             </div>
             {/* Add 20 pixels of space */}
             <div style={{ height: '50px' }}></div>

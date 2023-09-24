@@ -9,15 +9,15 @@ const Home = () => {
         <div className="flex-1 text-center md:text-6xl lg:text-8xl leading-normal mb-4 md:mb-0">
           <div className="flex flex-col h-full justify-center"> {/* Container for text */}
             {/* Title */}
-            <p className="text-4xl md:text-6xl lg:text-8xl mb-2 font-prata">
+            <p className="text-4xl md:text-6xl lg:text-8xl mb-2 ">
               E-Waste
             </p>
             {/* Subtitle */}
-            <p className="text-4xl md:text-6xl lg:text-8xl mb-2 font-prata">
+            <p className="text-4xl md:text-6xl lg:text-8xl mb-2 ">
               Facility
             </p>
             {/* Application name */}
-            <p className="text-4xl md:text-6xl lg:text-8xl font-prata">Locator</p>
+            <p className="text-4xl md:text-6xl lg:text-8xl ">Locator</p>
           </div>
         </div>
         {/* Right column for image */}
