@@ -1,5 +1,5 @@
 import React from 'react';
-import Form from '../components/Form'; // Import the Form component
+import Form from '../components/Form_Loc'; // Import the Form component
 
 const Locate = () => {
   return (
