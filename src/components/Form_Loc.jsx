@@ -53,11 +53,8 @@ const Form = () => {
       </style>
       {/* Input field for State */}
       <div className="mb-4 w-full center-input">
-<<<<<<< Updated upstream:src/components/Form.jsx
         <label className="block text-sm font-medium text-gray-700">Name:</label>
-=======
         <label className="block text-sm font-medium text-stroke-light">State:</label>
->>>>>>> Stashed changes:src/components/Form_Loc.jsx
         <input
           type="text"
           name="State"
