@@ -72,11 +72,11 @@ useEffect(() => {
 })
 
   return (
-    <div className='bg-secondary md:flex md:items:center text-stroke-dark border-2 border-purple-500' style={{ height: !isMobile ? largestDivHeight : '100%' }} >
+    <div className='bg-secondary md:flex md:items:center text-stroke-dark ' style={{ height: !isMobile ? largestDivHeight : '100%' }} >
       <div className="flex flex-col md:flex-row items-center justify-center p-3 ">
         {/* Left Section */}
         <div className="flex-1 text-center md:text-6xl lg:text-8xl leading-normal mb-4 md:mb-0 p-2">
-          <div className="flex flex-col h-full justify-center bg-primary rounded-xl py-6 px-3 border-2 border-blue-500">
+          <div className="flex flex-col h-full justify-center bg-primary rounded-xl py-6 px-3 ring-2 ring-highlight">
             <div >
               <p className="text-4xl md:text-5xl text-stroke-heading pb-6">
                 Locate <br/> Nearest Facility</p>

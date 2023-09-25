@@ -23,6 +23,9 @@ export default {
           dark: '#001e1d'
         },
         'highlight': {
+          DEFAULT: '#60a5fa'
+        },
+        'yellowHighlight': {
           DEFAULT: '#f9bc60'
         }
       },
