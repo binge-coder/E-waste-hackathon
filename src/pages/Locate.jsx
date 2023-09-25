@@ -1,7 +1,52 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Form from '../components/Form_Loc'; // Import the Form component
 
+const containerStyle = {
+  width: '740px',
+  height: '400px'
+};
+
+const center = {
+  lat: -3.745,
+  lng: -38.523
+};
+
+function MyComponent() {
+  const [map, setMap] = useState(null);
+
+  useEffect(() => {
+    const mapOptions = {
+      credentials: 'Au4NdWQQLnW3pjS4TSqCnmXGGl8i66jrUZvavdnBbtNGZLqCywVaDM4RxxoFRiT9', // Replace with your Bing Maps API key
+      center: new window.Microsoft.Maps.Location(center.lat, center.lng),
+      zoom: 10,
+    };
+
+    const map = new window.Microsoft.Maps.Map(document.getElementById('map'), mapOptions);
+
+    setMap(map);
+  }, []);
+
+  return (
+    <div id="map" style={containerStyle}></div>
+  );
+}
+
+
 const Locate = () => {
+  useEffect(() => {
+    // Load Bing Maps script dynamically
+    const script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = 'https://www.bing.com/api/maps/mapcontrol?callback=initializeBingMaps';
+    script.async = true;
+    script.defer = true;
+    document.head.appendChild(script);
+
+    // Define a global callback function for the Bing Maps script
+    window.initializeBingMaps = () => {
+      MyComponent(); // Once the script is loaded, render the MyComponent
+    };
+  }, []);
   return (
     <div className='bg-secondary text-stroke-dark min-h-screen'> {/* Change h-screen to min-h-screen */}
       <div className="flex flex-col md:flex-row items-center justify-center p-2 md:p-8">
@@ -26,11 +71,7 @@ const Locate = () => {
         <div className="flex-1 flex flex-col items-center justify-center bg-gray-200 rounded-lg p-4 md:max-w-3xl">
           <div className="w-full h-full">
             {/* Image */}
-            <img
-              src="https://media.istockphoto.com/id/1193323373/vector/a-colorful-trendy-card-design-vector-illustration.jpg?s=2048x2048&w=is&k=20&c=GIXth_77-RX3EPEGzVMo7P3LL64w8y_-xBtoHNRiBHY="
-              alt="Random"
-              className="w-full h-full object-cover rounded-lg mb-4"
-            />
+            <MyComponent />
           </div>
           {/* Additional content can go here */}
         </div>
