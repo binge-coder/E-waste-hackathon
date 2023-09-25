@@ -48,10 +48,12 @@ const Home = () => {
 
     document.head.appendChild(script);
   }, []);
+  const navbarHeight = 80; // 80px
+  const largestDivHeight = `calc(100vh - ${navbarHeight}px)`;
 
   return (
-    <div className='bg-secondary text-stroke-dark'>
-      <div className="flex flex-col md:flex-row items-center justify-center h-screen p-2 md:p-8">
+    <div className='bg-secondary text-stroke-dark border border-black' style={{ height: largestDivHeight }}>
+      <div className="flex flex-col md:flex-row items-center justify-center p-2 md:p-8">
         <div className="flex-1 text-center md:text-6xl lg:text-8xl leading-normal mb-4 md:mb-0">
           <div className="flex flex-col h-full justify-center">
             <p className="text-4xl md:text-6xl lg:text-8xl mb-2 ">E-Waste</p>
