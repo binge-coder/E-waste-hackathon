@@ -30,8 +30,9 @@ function MyComponent() {
   );
 }
 
-
 const Home = () => {
+  const [bingMapsLoaded, setBingMapsLoaded] = useState(false);
+
   useEffect(() => {
     // Load Bing Maps script dynamically
     const script = document.createElement('script');
@@ -39,36 +40,27 @@ const Home = () => {
     script.src = 'https://www.bing.com/api/maps/mapcontrol?callback=initializeBingMaps';
     script.async = true;
     script.defer = true;
-    document.head.appendChild(script);
 
     // Define a global callback function for the Bing Maps script
     window.initializeBingMaps = () => {
-      MyComponent(); // Once the script is loaded, render the MyComponent
+      setBingMapsLoaded(true);
     };
+
+    document.head.appendChild(script);
   }, []);
+
   return (
     <div className='bg-secondary text-stroke-dark'>
-      {/* Container for the entire content */}
       <div className="flex flex-col md:flex-row items-center justify-center h-screen p-2 md:p-8">
-        {/* Left column for text content */}
         <div className="flex-1 text-center md:text-6xl lg:text-8xl leading-normal mb-4 md:mb-0">
-          <div className="flex flex-col h-full justify-center"> {/* Container for text */}
-            {/* Title */}
-            <p className="text-4xl md:text-6xl lg:text-8xl mb-2 ">
-              E-Waste
-            </p>
-            {/* Subtitle */}
-            <p className="text-4xl md:text-6xl lg:text-8xl mb-2 ">
-              Facility
-            </p>
-            {/* Application name */}
+          <div className="flex flex-col h-full justify-center">
+            <p className="text-4xl md:text-6xl lg:text-8xl mb-2 ">E-Waste</p>
+            <p className="text-4xl md:text-6xl lg:text-8xl mb-2 ">Facility</p>
             <p className="text-4xl md:text-6xl lg:text-8xl ">Locator</p>
           </div>
         </div>
-        {/* Right column for image */}
         <div className="flex-1 flex flex-col items-center justify-center bg-gray-200 rounded-lg p-4 md:max-w-2xl">
-          {/* Image */}
-          <MyComponent />
+          {bingMapsLoaded && <MyComponent />}
         </div>
       </div>
     </div>
