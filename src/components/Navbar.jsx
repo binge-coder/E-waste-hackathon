@@ -82,7 +82,7 @@ const Navbar = () => {
             <div className='md:hidden'>
                 <div className='px-2 py-4 space-y-1 sm:px-3'>
                 {navlinks.map((myLink,index) => (
-                            <Link key={index} className='block  text-stroke-light hover:bg-secondary hover:text-stroke-dark text-center py-5 rounded-md text-base font-medium' to={myLink.link}>{myLink.title}</Link>
+                            <Link key={index} className='block  text-stroke-light hover:bg-secondary hover:text-stroke-dark text-center py-5 rounded-md text-base font-medium' onClick={handleMenu} to={myLink.link}>{myLink.title}</Link>
                         )
                         )}
                 </div>
