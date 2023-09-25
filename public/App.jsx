@@ -1,9 +1,9 @@
-import Navbar from './components/Navbar'
+import Navbar from './Navbar'
 import { Routes, Route} from 'react-router-dom'
-import Home from "./pages/Home"
-import Locate from "./pages/Locate"
-import Credit_Calc from "./pages/Credit_Calc"
-import About from "./pages/About"
+import Home from "./Home"
+import Locate from "./Locate"
+import Credit_Calc from "./Credit_Calc"
+import About from "./About"
 
 
 // import './App.css'

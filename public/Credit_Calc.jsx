@@ -1,5 +1,5 @@
 import React from 'react'
-import Form from '../components/Form_Calc'; // Import the Form component
+import Form from './Form_Calc'; // Import the Form component
 
 const Credit_Calc = () => {
   return (

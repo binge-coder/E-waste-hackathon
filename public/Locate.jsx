@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Form from '../components/Form_Loc'; // Import the Form component
+import Form from './Form_Loc'; // Import the Form component
 
 // const containerStyle = {
 //   width: '740px',
