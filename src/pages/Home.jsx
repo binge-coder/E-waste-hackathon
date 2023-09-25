@@ -10,14 +10,7 @@ const Home = () => {
           <div className="flex flex-col h-full justify-center"> {/* Container for text */}
             {/* Title */}
             <p className="text-4xl md:text-6xl lg:text-8xl mb-2 ">
-              E-Waste
-            </p>
-            {/* Subtitle */}
-            <p className="text-4xl md:text-6xl lg:text-8xl mb-2 ">
-              Facility
-            </p>
-            {/* Application name */}
-            <p className="text-4xl md:text-6xl lg:text-8xl ">Locator</p>
+              E-Waste <br /> Facility <br /> Locator</p>
           </div>
         </div>
         {/* Right column for image */}
