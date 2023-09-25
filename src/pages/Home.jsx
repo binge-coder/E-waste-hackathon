@@ -61,7 +61,7 @@ const Home = () => {
             <p className="text-4xl md:text-6xl lg:text-8xl m-1 ">Locator</p>
           </div>
         </div>
-        <div className="  rounded-lg bg-tertiary p-1 w-11/12 md:w-1/2 h-96 my-2">
+        <div className="rounded-lg bg-tertiary p-1 w-11/12 md:w-1/2 h-96 my-2">
           {bingMapsLoaded && <MyComponent />}
         </div>
       </div>
