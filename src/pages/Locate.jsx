@@ -72,27 +72,24 @@ useEffect(() => {
 })
 
   return (
-    <div className='bg-secondary text-stroke-dark ' style={{ height: !isMobile ? largestDivHeight : '100%' }} >
-      <div className="flex flex-col md:flex-row items-center justify-center ">
+    <div className='bg-secondary md:flex md:items:center text-stroke-dark border-2 border-purple-500' style={{ height: !isMobile ? largestDivHeight : '100%' }} >
+      <div className="flex flex-col md:flex-row items-center justify-center p-3 ">
         {/* Left Section */}
-        <div className="flex-1 text-center md:text-6xl lg:text-8xl leading-normal mb-4 md:mb-0 p-8 ">
-          <div className="flex flex-col h-full justify-center bg-primary rounded-xl py-6 px-2 ">
-            {/* Top one-third for text */}
-            <div className="h-1/3 ">
-              <p className="text-4xl md:text-5xl text-stroke-heading">
-                Locate <br></br> Nearest Facility</p>
+        <div className="flex-1 text-center md:text-6xl lg:text-8xl leading-normal mb-4 md:mb-0 p-2">
+          <div className="flex flex-col h-full justify-center bg-primary rounded-xl py-6 px-3 border-2 border-blue-500">
+            <div >
+              <p className="text-4xl md:text-5xl text-stroke-heading pb-6">
+                Locate <br/> Nearest Facility</p>
             </div>
-            {/* Add 20 pixels of space */}
-            <div style={{ height: '50px' }}></div>
             {/* Bottom two-thirds for the Form component */}
-            <div className="h-2/3 ">
-              {bingMapsLoaded && <Form />} {/* Render the Form component here when Bing Maps is loaded */}
+            <div>
+              <Form />
             </div>
           </div>
         </div>
 
         {/* Right Section */}
-        <div className="rounded-lg bg-tertiary p-1 w-11/12 md:w-1/2 h-96 my-2">
+        <div className="rounded-lg bg-tertiary p-2 w-11/12 md:w-1/2 h-[574px] my-2">
           {bingMapsLoaded && <MyComponent />} 
           {/* Render MyComponent when Bing Maps is loaded */}
 
