@@ -55,7 +55,7 @@ const Navbar = () => {
                     
                    
                     <button
-  className={`relative group ${open ? 'open' : ''} md:hidden -mr-2`}
+  className={`relative group ${open ? 'open' : ''} md:hidden `}
   type="button"
   onClick={handleMenu}
 >
