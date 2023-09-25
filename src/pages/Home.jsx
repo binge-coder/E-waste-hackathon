@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 
-const containerStyle = {
-  width: '640px',
-  height: '400px'
-};
+// const containerStyle = {
+//   width: '640px',
+//   height: '400px'
+// };
 
 const center = {
   lat: -3.745,
@@ -26,7 +26,7 @@ function MyComponent() {
   }, []);
 
   return (
-    <div id="map" style={containerStyle}></div>
+    <div id="map" ></div>
   );
 }
 
@@ -52,16 +52,16 @@ const Home = () => {
   const largestDivHeight = `calc(100vh - ${navbarHeight}px)`;
 
   return (
-    <div className='bg-secondary text-stroke-dark border border-black' style={{ height: largestDivHeight }}>
-      <div className="flex flex-col md:flex-row items-center justify-center p-2 md:p-8">
-        <div className="flex-1 text-center md:text-6xl lg:text-8xl leading-normal mb-4 md:mb-0">
-          <div className="flex flex-col h-full justify-center">
-            <p className="text-4xl md:text-6xl lg:text-8xl mb-2 ">E-Waste</p>
-            <p className="text-4xl md:text-6xl lg:text-8xl mb-2 ">Facility</p>
-            <p className="text-4xl md:text-6xl lg:text-8xl ">Locator</p>
+    <div className='bg-secondary text-stroke-dark flex md:flex-row justify-center items-center' style={{ height: largestDivHeight }}>
+      <div className="flex flex-col md:flex-row items-center justify-center p-2 md:p-8 border border-black w-11/12 bg-primary rounded-md">
+        <div className="flex-1 text-center md:text-6xl lg:text-8xl leading-normal mb-4 md:mb-0  md:h-96">
+          <div className="flex flex-row md:flex-col h-full justify-center text-stroke-heading">
+            <p className="text-4xl md:text-6xl lg:text-8xl m-1 ">E-Waste</p>
+            <p className="text-4xl md:text-6xl lg:text-8xl m-1 ">Facility</p>
+            <p className="text-4xl md:text-6xl lg:text-8xl m-1 ">Locator</p>
           </div>
         </div>
-        <div className="flex-1 flex flex-col items-center justify-center bg-gray-200 rounded-lg p-4 md:max-w-2xl">
+        <div className="  rounded-lg bg-tertiary p-1 w-11/12 md:w-1/2 h-96 my-2">
           {bingMapsLoaded && <MyComponent />}
         </div>
       </div>
