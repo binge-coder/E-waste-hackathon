@@ -57,7 +57,7 @@ const Form = () => {
           name="devType"
           value={formData.devType}
           onChange={handleChange}
-          className="border border-gray-300 p-2 rounded-md w-full narrow-input small-font"
+          className="ring-2 hover:ring-highlight p-2 rounded-md w-full narrow-input small-font "
         >
           <option value="Mobile">Mobile</option>
           <option value="Television">Television</option>
@@ -73,7 +73,7 @@ const Form = () => {
           name="modelNumber"
           value={formData.modelNumber}
           onChange={handleChange}
-          className="border border-gray-300 p-2 rounded-md w-full narrow-input small-font"
+          className="ring-2 hover:ring-highlight p-2 rounded-md w-full narrow-input small-font "
           required
         />
       </div>

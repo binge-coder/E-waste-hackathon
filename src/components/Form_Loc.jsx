@@ -60,7 +60,7 @@ const Form = () => {
           name="state" 
           value={formData.state}
           onChange={handleChange}
-          className="border border-gray-300 p-2 rounded-md w-full narrow-input small-font"
+          className="ring-2 hover:ring-highlight p-2 rounded-md w-full narrow-input small-font "
           required
         />
       </div>
@@ -72,7 +72,7 @@ const Form = () => {
           name="city" 
           value={formData.city}
           onChange={handleChange}
-          className="border border-gray-300 p-2 rounded-md w-full narrow-input small-font"
+          className="ring-2 hover:ring-highlight p-2 rounded-md w-full narrow-input small-font "
           required
         />
       </div>
@@ -84,7 +84,7 @@ const Form = () => {
           name="pinCode"
           value={formData.pinCode}
           onChange={handleChange}
-          className="border border-gray-300 p-2 rounded-md w-full narrow-input small-font"
+          className="ring-2 hover:ring-highlight p-2 rounded-md w-full narrow-input small-font "
           required
         />
       </div>
@@ -95,7 +95,7 @@ const Form = () => {
           name="radius"
           value={formData.radius}
           onChange={handleChange}
-          className="border border-gray-300 p-2 rounded-md w-full narrow-input small-font"
+          className="ring-2 hover:ring-highlight p-2 rounded-md w-full narrow-input small-font "
         >
           <option value="15km">15km</option>
           <option value="30km">30km</option>
