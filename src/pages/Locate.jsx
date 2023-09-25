@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import Form from '../components/Form_Loc'; // Import the Form component
 
-const containerStyle = {
-  width: '740px',
-  height: '400px'
-};
+// const containerStyle = {
+//   width: '740px',
+//   height: '400px'
+// };
 
 const center = {
   lat: -3.745,
@@ -29,7 +29,7 @@ function MyComponent() {
   }, []);
 
   return (
-    <div id="map" style={containerStyle}></div>
+    <div id="map" ></div>
   );
 }
 
@@ -72,8 +72,8 @@ useEffect(() => {
 })
 
   return (
-    <div className='bg-secondary text-stroke-dark md:flex' style={{ height: !isMobile ? largestDivHeight : '100%' }} >
-      <div className="flex flex-col md:flex-row items-center justify-center border border-black">
+    <div className='bg-secondary text-stroke-dark ' style={{ height: !isMobile ? largestDivHeight : '100%' }} >
+      <div className="flex flex-col md:flex-row items-center justify-center ">
         {/* Left Section */}
         <div className="flex-1 text-center md:text-6xl lg:text-8xl leading-normal mb-4 md:mb-0 p-8 ">
           <div className="flex flex-col h-full justify-center bg-primary rounded-xl py-6 px-2 ">
@@ -93,7 +93,7 @@ useEffect(() => {
 
         {/* Right Section */}
         <div className="rounded-lg bg-tertiary p-1 w-11/12 md:w-1/2 h-96 my-2">
-          {/* {bingMapsLoaded && <MyComponent />}  */}
+          {bingMapsLoaded && <MyComponent />} 
           {/* Render MyComponent when Bing Maps is loaded */}
 
           {/* Additional content can go here */}
