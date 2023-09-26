@@ -1,3 +1,3 @@
 - Add website icon (titlebar)
 - add logo in navbar
-- In locate page: the background does not apply like mobile if page is refreshed in mobile view. it only applies if page is **resized** to mobile view. 
+- [x] In locate page: the background does not apply like mobile if page is refreshed in mobile view. it only applies if page is **resized** to mobile view. 
