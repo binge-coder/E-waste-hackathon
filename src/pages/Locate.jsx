@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useLayoutEffect, useEffect, useState } from 'react';
 import Form from '../components/Form_Loc'; // Import the Form component
 
 // const containerStyle = {
@@ -57,20 +57,32 @@ const Locate = () => {
 
   const [isMobile, setIsMobile] = useState(false)
  
-//choose the screen size 
-const handleResize = () => {
-  if (window.innerWidth < 720) {
-      setIsMobile(true)
-  } else {
-      setIsMobile(false)
-  }
-}
+  const handleResize = () => {
+    setIsMobile(window.innerWidth < 720);
+  };
 
-// create an event listener
-useEffect(() => {
-  window.addEventListener("resize", handleResize)
-})
+  useLayoutEffect(() => {
+    const script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = 'https://www.bing.com/api/maps/mapcontrol?callback=initializeBingMaps';
+    script.async = true;
+    script.defer = true;
+    document.head.appendChild(script);
 
+    window.initializeBingMaps = () => {
+      setBingMapsLoaded(true);
+    };
+
+    // Set initial value of isMobile and add an event listener for window resize
+    handleResize();
+    window.addEventListener('resize', handleResize);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+  
   return (
     <div className='bg-secondary md:flex md:items:center text-stroke-dark ' style={{ height: !isMobile ? largestDivHeight : '100%' }} >
       <div className="flex flex-col md:flex-row items-center justify-center p-3 ">
