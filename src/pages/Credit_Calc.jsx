@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import Form from '../components/Form_Calc'; // Import the Form component
 import RandomFactoid from '../components/Factoid'; // Import the Factoid component
 import x from "../assets/Slider.jpg"
+import Table from '../components/Table_Calc'; // Import the Table component
 
 const Credit_Calc = () => {
   const [showPopup, setShowPopup] = useState(false);
@@ -31,16 +32,20 @@ const Credit_Calc = () => {
         </div>
         {showPopup && <RandomFactoid />}
         {/* Right Section */}
-        <div className="flex-1 flex flex-col items-center justify-center rounded-lg p-4 md:max-w-3xl">
-          <div className="w-full h-full">
-            {/* Image */}
-            <img
-              src={x}
-              alt="Random"
-              className="w-full h-full object-cover rounded-lg mb-4"
-            />
+        <div className="flex-1 text-center md:text-6xl lg:text-8xl leading-normal mb-4 md:mb-0 p-8 ">
+          <div className="flex flex-col h-full justify-center bg-primary rounded-xl py-6 px-2 ">
+            {/* Top one-third for text */}
+            <div className="h-1/3 ">
+              <p className="text-4xl md:text-5xl text-stroke-heading">
+                Composition <br></br>Table</p>
+            </div>
+            {/* Add 20 pixels of space */}
+            <div style={{ height: '50px' }}></div>
+            {/* Bottom two-thirds for the Form component */}
+            <div className="h-2/3 ">
+              <Table /> {/* Render the Form component here */}
+            </div>
           </div>
-          {/* Additional content can go here */}
         </div>
       </div>
     </div>
