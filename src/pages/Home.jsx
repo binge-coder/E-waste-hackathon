@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import home_img from '../assets/home_img.jpg'
 import RandomFactoid from '../components/Factoid'; // Import the Factoid component
+import { Link } from 'react-router-dom'
 
 // const containerStyle = {
 //   width: '640px',
@@ -60,6 +61,7 @@ const Home = () => {
         <div className="flex-1 text-center md:text-6xl lg:text-8xl leading-normal md:mb-0  md:h-96">
           <div className="flex flex-col md:flex-col h-full justify-center text-stroke-dark py-3">
             <p className="text-4xl md:text-6xl lg:text-8xl m-1">E-Waste<br />Facility<br />Locator</p>
+            <Link className='block ring-white ring w-28 text-stroke-light bg-primary text-center py-3 rounded-md text-base font-medium mx-auto hover:bg-secondary hover:text-stroke-dark' to={'/locate'}>Click here</Link>
           </div>
         </div>
         <div className="rounded-lg w-11/12 md:w-1/2">
