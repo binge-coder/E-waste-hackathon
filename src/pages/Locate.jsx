@@ -59,6 +59,7 @@ const Locate = () => {
 
   const [isMobile, setIsMobile] = useState(true);
   const [showPopup, setShowPopup] = useState(false);
+  const [showTable, setShowTable] = useState(false);
   useEffect(() => {
     // Show the popup when the component mounts
     setShowPopup(true);
@@ -67,6 +68,13 @@ const Locate = () => {
   const handleResize = () => {
     setIsMobile(window.innerWidth < 768);
   };
+
+  const myHandleSubmit = () => {
+    // Add your logic to handle the form submission here, if needed
+
+    // Set showTable to true to render the Table component
+    setShowTable(true);
+  }
 
   useLayoutEffect(() => {
     const script = document.createElement('script');
@@ -92,7 +100,7 @@ const Locate = () => {
   
   return (
     <div className='bg-secondary md:flex md:items-center md:justify-center text-stroke-dark '  >
-      <div className="flex flex-col md:flex-row items-center justify-center p-3 ">
+      <div className="flex flex-col md:flex-row items-center justify-center p-3 md:w-3/4">
         {/* Left Section */}
         <div className="flex-1 text-center md:text-6xl lg:text-8xl leading-normal mb-4 md:mb-0 p-2">
           <div className="flex flex-col h-full justify-center bg-primary rounded-xl py-6 px-3 ring-2 ring-highlight">
@@ -100,20 +108,15 @@ const Locate = () => {
               <p className="text-4xl md:text-5xl text-stroke-heading pb-6">
                 Locate <br/> Nearest Facility</p>
             </div>
-            {/* Bottom two-thirds for the Form component */}
-            <div>
-              <Form />
-              <Table />
-            </div>
+            {/* Render Form or Table based on showTable state */}
+            {showTable ? <Table /> : <Form myHandleSubmit={myHandleSubmit} />}
           </div>
         </div>
-          {/* Display the popup if showPopup is true */}
-          {showPopup && <RandomFactoid />}
+        {/* Display the popup if showPopup is true */}
+        {showPopup && <RandomFactoid />}
         {/* Right Section */}
-        <div className="rounded-lg bg-tertiary p-2 w-11/12 md:w-1/2 h-[574px] my-2">
-          {bingMapsLoaded && <MyComponent />} 
-          {/* Render MyComponent when Bing Maps is loaded */}
-
+        <div className="rounded-lg bg-tertiary p-2 w-11/12 md:w-1/2 h-[574px] my-2 ">
+          {bingMapsLoaded && <MyComponent />}
           {/* Additional content can go here */}
         </div>
       </div>

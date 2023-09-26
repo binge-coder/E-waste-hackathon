@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const Form = () => {
+const Form = ({myHandleSubmit}) => {
   // State to manage form data
   const [formData, setFormData] = useState({
     state: '',
@@ -114,7 +114,7 @@ const Form = () => {
       </div>
       {/* Submit button */}
       <button
-        type="submit" className='w-28 uppercase transition-all duration-500 border-white text-stroke-light border-b-4 ring-1 ring-secondary hover:border-0 hover:bg-secondary hover:text-stroke-dark px-3 py-2 rounded-md text-sm font-medium '
+        type="submit" className='w-28 uppercase transition-all duration-500 border-white text-stroke-light border-b-4 ring-1 ring-secondary hover:border-0 hover:bg-secondary hover:text-stroke-dark px-3 py-2 rounded-md text-sm font-medium ' onClick={myHandleSubmit}
       >
         Submit
       </button>
