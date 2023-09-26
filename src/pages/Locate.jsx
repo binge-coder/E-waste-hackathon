@@ -60,10 +60,10 @@ const Locate = () => {
   const [isMobile, setIsMobile] = useState(true);
   const [showPopup, setShowPopup] = useState(false);
   const [showTable, setShowTable] = useState(false);
-  useEffect(() => {
-    // Show the popup when the component mounts
-    setShowPopup(true);
-  }, []);
+  // useEffect(() => {
+  //   // Show the popup when the component mounts
+  //   setShowPopup(true);
+  // }, []);
  
   const handleResize = () => {
     setIsMobile(window.innerWidth < 768);
@@ -74,6 +74,7 @@ const Locate = () => {
 
     // Set showTable to true to render the Table component
     setShowTable(true);
+    setShowPopup(!showPopup);
   }
 
   useLayoutEffect(() => {
@@ -105,9 +106,9 @@ const Locate = () => {
         {/* Left Section */}
         <div className="flex-1 text-center md:text-6xl lg:text-8xl leading-normal mb-4 md:mb-0 p-2">
           <div className="flex flex-col h-full justify-center bg-primary rounded-xl py-6 px-3 ring-2 ring-highlight">
-            <div >
+            <div>
               <p className="text-4xl md:text-5xl text-stroke-heading pb-6">
-                Locate <br/> Nearest Facility</p>
+                Locate <br /> Nearest Facility</p>
             </div>
             {/* Render Form or Table based on showTable state */}
             {showTable ? <Table /> : <Form myHandleSubmit={myHandleSubmit} />}
