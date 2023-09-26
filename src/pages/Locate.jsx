@@ -1,5 +1,6 @@
 import React, { useLayoutEffect, useEffect, useState } from 'react';
 import Form from '../components/Form_Loc'; // Import the Form component
+import RandomFactoid from '../components/Factoid'; // Import the Factoid component
 
 // const containerStyle = {
 //   width: '740px',

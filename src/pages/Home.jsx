@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import home_img from '../assets/home_img.jpg'
+import RandomFactoid from '../components/Factoid'; // Import the Factoid component
 
 // const containerStyle = {
 //   width: '640px',

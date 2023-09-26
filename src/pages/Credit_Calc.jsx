@@ -1,5 +1,6 @@
 import React from 'react'
 import Form from '../components/Form_Calc'; // Import the Form component
+import RandomFactoid from '../components/Factoid'; // Import the Factoid component
 
 const Credit_Calc = () => {
   return (
