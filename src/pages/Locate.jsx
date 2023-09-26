@@ -84,7 +84,7 @@ const Locate = () => {
   }, []);
   
   return (
-    <div className='bg-secondary md:flex md:items:center text-stroke-dark ' style={{ height: !isMobile ? largestDivHeight : '100%' }} >
+    <div className='bg-secondary md:flex md:items-center md:justify-center text-stroke-dark ' style={{ height: !isMobile ? largestDivHeight : '100%' }} >
       <div className="flex flex-col md:flex-row items-center justify-center p-3 ">
         {/* Left Section */}
         <div className="flex-1 text-center md:text-6xl lg:text-8xl leading-normal mb-4 md:mb-0 p-2">
