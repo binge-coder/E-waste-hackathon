@@ -34,7 +34,7 @@ const RandomFactoid = () => {
   return (
     showFactoid && (
       <div
-        className="bg-primary p-4 rounded-lg shadow-lg mb-4 relative border-4 border-white  "
+        className="bg-primary p-4 rounded-3xl shadow-2xl shadow-black mb-4 relative border-4 border-white  "
         style={{
           position: 'fixed',
           top: '40%', // Adjust this value to control the vertical position
