@@ -44,7 +44,7 @@ const Navbar = () => {
                 <div className='hidden md:block'>
                     <div className='ml-10 flex items-baseline space-x-4'>
                         {navlinks.map((myLink,index) => (
-                            <Link key={index} className='text-stroke-light transition-all duration-500 border-b-4 ring-1 ring-secondary hover:border-0 hover:bg-secondary hover:text-stroke-dark px-3 py-2 rounded-md text-md font-medium' to={myLink.link}>{myLink.title}</Link>
+                            <Link key={index} className='text-stroke-light transition-all duration-500 border-b-4 ring-1 ring-secondary hover:border-0 hover:bg-secondary hover:text-stroke-dark px-3 py-2 rounded-md text-md font-medium hover:font-bold' to={myLink.link}>{myLink.title}</Link>
                         )
                         )}
                     </div>
@@ -86,7 +86,7 @@ const Navbar = () => {
             <div className='md:hidden'>
                 <div className='px-2 py-4 space-y-1 sm:px-3'>
                 {navlinks.map((myLink,index) => (
-                            <Link key={index} className='block  text-stroke-light hover:bg-secondary hover:text-stroke-dark text-center py-5 rounded-md text-base font-medium' onClick={handleMenu} to={myLink.link}>{myLink.title}</Link>
+                            <Link key={index} className='block  text-stroke-light hover:bg-secondary hover:text-stroke-dark text-center py-5 rounded-md text-base font-medium hover:font-bold' onClick={handleMenu} to={myLink.link}>{myLink.title}</Link>
                         )
                         )}
                 </div>

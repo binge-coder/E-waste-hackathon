@@ -54,10 +54,10 @@ const Locate = () => {
   }, []);
 
   // height setting criteria
-  const navbarHeight = 80; // 80px
-  const largestDivHeight = `calc(100vh - ${navbarHeight}px)`;
+  // const navbarHeight = 80; // 80px
+  // const largestDivHeight = `calc(100vh - ${navbarHeight}px)`;
 
-  const [isMobile, setIsMobile] = useState(true);
+  // const [isMobile, setIsMobile] = useState(true);
   const [showPopup, setShowPopup] = useState(false);
   const [showTable, setShowTable] = useState(false);
   // useEffect(() => {
@@ -65,9 +65,9 @@ const Locate = () => {
   //   setShowPopup(true);
   // }, []);
  
-  const handleResize = () => {
-    setIsMobile(window.innerWidth < 768);
-  };
+  // const handleResize = () => {
+  //   setIsMobile(window.innerWidth < 768);
+  // };
 
   const myHandleSubmit = () => {
     // Add your logic to handle the form submission here, if needed
@@ -90,18 +90,18 @@ const Locate = () => {
     };
 
     // Set initial value of isMobile and add an event listener for window resize
-    handleResize();
-    window.addEventListener('resize', handleResize);
+    // handleResize();
+    // window.addEventListener('resize', handleResize);
 
     // Clean up the event listener when the component unmounts
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
+    // return () => {
+    //   window.removeEventListener('resize', handleResize);
+    // };
   }, []);
-  
+  // style={{ height: !isMobile ? largestDivHeight : '100%' }}
   
   return (
-    <div className='bg-secondary md:flex md:items-center md:justify-center text-stroke-dark font-Rubik' style={{ height: !isMobile ? largestDivHeight : '100%' }}>
+    <div className='bg-secondary md:flex md:items-center md:justify-center text-stroke-dark font-Rubik h-full' >
       <div className="flex flex-col md:flex-row items-center justify-center p-3 md:w-3/4">
         {/* Left Section */}
         <div className="flex-1 text-center md:text-6xl lg:text-8xl leading-normal mb-4 md:mb-0 p-2">
