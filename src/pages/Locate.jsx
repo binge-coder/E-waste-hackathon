@@ -55,7 +55,7 @@ const Locate = () => {
   const navbarHeight = 80; // 80px
   const largestDivHeight = `calc(100vh - ${navbarHeight}px)`;
 
-  const [isMobile, setIsMobile] = useState(false)
+  const [isMobile, setIsMobile] = useState(true)
  
 //choose the screen size 
 const handleResize = () => {
