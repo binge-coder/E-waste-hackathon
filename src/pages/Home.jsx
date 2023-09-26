@@ -53,7 +53,7 @@ const Home = () => {
   const largestDivHeight = `calc(100vh - ${navbarHeight}px + ) `;
 
   return (
-    <div className='bg-secondary text-stroke-dark flex md:flex-row justify-center items-center' style={{ height: largestDivHeight }} >
+    <div className='bg-secondary text-stroke-dark flex md:flex-row justify-center items-center py-4' >
       <div className="flex flex-col md:flex-row items-center justify-center  w-11/12 bg-secondary rounded-md ">
         <div className="flex-1 text-center md:text-6xl lg:text-8xl leading-normal md:mb-0  md:h-96">
         <div className="flex flex-col md:flex-col h-full justify-center text-stroke-dark py-3">
