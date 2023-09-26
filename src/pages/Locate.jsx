@@ -57,7 +57,12 @@ const Locate = () => {
   const navbarHeight = 80; // 80px
   const largestDivHeight = `calc(100vh - ${navbarHeight}px)`;
 
-  const [isMobile, setIsMobile] = useState(true)
+  const [isMobile, setIsMobile] = useState(true);
+  const [showPopup, setShowPopup] = useState(false);
+  useEffect(() => {
+    // Show the popup when the component mounts
+    setShowPopup(true);
+  }, []);
  
   const handleResize = () => {
     setIsMobile(window.innerWidth < 768);
@@ -102,7 +107,8 @@ const Locate = () => {
             </div>
           </div>
         </div>
-
+          {/* Display the popup if showPopup is true */}
+          {showPopup && <RandomFactoid />}
         {/* Right Section */}
         <div className="rounded-lg bg-tertiary p-2 w-11/12 md:w-1/2 h-[574px] my-2">
           {bingMapsLoaded && <MyComponent />} 

@@ -1,8 +1,14 @@
 import React from 'react'
+import { useState, useEffect } from 'react';
 import Form from '../components/Form_Calc'; // Import the Form component
 import RandomFactoid from '../components/Factoid'; // Import the Factoid component
 
 const Credit_Calc = () => {
+  const [showPopup, setShowPopup] = useState(false);
+  useEffect(() => {
+    // Show the popup when the component mounts
+    setShowPopup(true);
+  }, []);
   return (
     <div className='bg-secondary text-stroke-dark min-h-screen'> {/* Change h-screen to min-h-screen */}
       <div className="flex flex-col md:flex-row items-center justify-center p-2 md:p-8">
@@ -22,7 +28,7 @@ const Credit_Calc = () => {
             </div>
           </div>
         </div>
-        
+        {showPopup && <RandomFactoid />}
         {/* Right Section */}
         <div className="flex-1 flex flex-col items-center justify-center bg-gray-200 rounded-lg p-4 md:max-w-3xl">
           <div className="w-full h-full">

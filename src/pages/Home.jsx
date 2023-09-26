@@ -50,13 +50,9 @@ const Home = () => {
 
   //   document.head.appendChild(script);
   // }, []);
-  const [showPopup, setShowPopup] = useState(false);
   const navbarHeight = 80; // 80px
   const largestDivHeight = `calc(100vh - ${navbarHeight}px + ) `;
-  useEffect(() => {
-    // Show the popup when the component mounts
-    setShowPopup(true);
-  }, []);
+
 
   return (
     <div className='bg-secondary text-stroke-dark flex md:flex-row justify-center items-center py-4'>
@@ -67,9 +63,7 @@ const Home = () => {
           </div>
         </div>
         <div className="rounded-lg w-11/12 md:w-1/2">
-          {/* Display the popup if showPopup is true */}
-          {showPopup && <RandomFactoid />}
-          {/* Image */}
+
           <img
             src={home_img}
             alt="Random"
