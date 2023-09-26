@@ -12,6 +12,10 @@ const navlinks = [
         link: "/locate",
     },
     {
+        title: "Login",
+        link: "/login",
+    },
+    {
         title: "Credit Calculator",
         link: "/credit_calc",
     },

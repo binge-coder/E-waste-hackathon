@@ -1,15 +1,14 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
-import Form from '../components/Form_Calc'; // Import the Form component
+import Form from '../components/Form_Login'; // Import the Form component
 import RandomFactoid from '../components/Factoid'; // Import the Factoid component
-import x from "../assets/Slider.jpg"
 
-const Credit_Calc = () => {
-  const [showPopup, setShowPopup] = useState(false);
-  useEffect(() => {
-    // Show the popup when the component mounts
-    setShowPopup(true);
-  }, []);
+const Login = () => {
+    const [showPopup, setShowPopup] = useState(false);
+    useEffect(() => {
+      // Show the popup when the component mounts
+      setShowPopup(true);
+    }, []);
   return (
     <div className='bg-secondary text-stroke-dark min-h-screen'> {/* Change h-screen to min-h-screen */}
       <div className="flex flex-col md:flex-row items-center justify-center p-2 md:p-8">
@@ -19,7 +18,7 @@ const Credit_Calc = () => {
             {/* Top one-third for text */}
             <div className="h-1/3 ">
               <p className="text-4xl md:text-5xl text-stroke-heading">
-                Credit <br></br>Calculator</p>
+                Login </p>
             </div>
             {/* Add 20 pixels of space */}
             <div style={{ height: '50px' }}></div>
@@ -30,12 +29,13 @@ const Credit_Calc = () => {
           </div>
         </div>
         {showPopup && <RandomFactoid />}
+        
         {/* Right Section */}
-        <div className="flex-1 flex flex-col items-center justify-center rounded-lg p-4 md:max-w-3xl">
+        <div className="flex-1 flex flex-col items-center justify-center bg-gray-200 rounded-lg p-4 md:max-w-3xl">
           <div className="w-full h-full">
             {/* Image */}
             <img
-              src={x}
+              src="https://media.istockphoto.com/id/1193323373/vector/a-colorful-trendy-card-design-vector-illustration.jpg?s=2048x2048&w=is&k=20&c=GIXth_77-RX3EPEGzVMo7P3LL64w8y_-xBtoHNRiBHY="
               alt="Random"
               className="w-full h-full object-cover rounded-lg mb-4"
             />
@@ -47,4 +47,4 @@ const Credit_Calc = () => {
   );
 }
 
-export default Credit_Calc
+export default Login
