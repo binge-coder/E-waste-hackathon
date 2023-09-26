@@ -19,7 +19,7 @@ const Table = () => {
           <td className={`border px-4 py-2 ${cellTextSize}`}>1</td>
           <td className={`border px-4 py-2 ${cellTextSize}`}>10 km</td>
           <td className={`border px-4 py-2 ${cellTextSize}`}>
-            <a href="#">Link 1</a>
+            <a href="https://greenbirdrecycling.in/">Greenbird Recycling</a>
           </td>
           <td className={`border px-4 py-2 ${cellTextSize}`}>Address 1</td>
         </tr>
@@ -27,7 +27,7 @@ const Table = () => {
           <td className={`border px-4 py-2 ${cellTextSize}`}>2</td>
           <td className={`border px-4 py-2 ${cellTextSize}`}>20 km</td>
           <td className={`border px-4 py-2 ${cellTextSize}`}>
-            <a href="#">Link 2</a>
+            <a href="https://www.justdial.com/Ludhiana/Spreco-Recycling-Focal-Point/0161PX161-X161-200323212959-F7C3_BZDET">Spreco Recycling</a>
           </td>
           <td className={`border px-4 py-2 ${cellTextSize}`}>Address 2</td>
         </tr>
@@ -35,7 +35,7 @@ const Table = () => {
           <td className={`border px-4 py-2 ${cellTextSize}`}>3</td>
           <td className={`border px-4 py-2 ${cellTextSize}`}>30 km</td>
           <td className={`border px-4 py-2 ${cellTextSize}`}>
-            <a href="#">Link 3</a>
+            <a href="https://reparyog.com/">Reparyog</a>
           </td>
           <td className={`border px-4 py-2 ${cellTextSize}`}>Address 3</td>
         </tr>
@@ -43,7 +43,7 @@ const Table = () => {
           <td className={`border px-4 py-2 ${cellTextSize}`}>4</td>
           <td className={`border px-4 py-2 ${cellTextSize}`}>40 km</td>
           <td className={`border px-4 py-2 ${cellTextSize}`}>
-            <a href="#">Link 4</a>
+            <a href="https://www.recyclingvilla.com/">Recycling Villa</a>
           </td>
           <td className={`border px-4 py-2 ${cellTextSize}`}>Address 4</td>
         </tr>
