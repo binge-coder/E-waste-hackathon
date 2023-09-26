@@ -2,7 +2,7 @@ import React from 'react';
 
 const Table = () => {
   const cellTextSize = 'text-sm'; // Change this to the desired text size for table cells
-  const headingTextSize = 'text-sm';
+  const headingTextSize = 'text-xl';
 
   return (
     <table className="table-auto text-white mx-auto mt-3">
