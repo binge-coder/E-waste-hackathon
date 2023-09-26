@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { FaTimes } from "react-icons/fa"
 
 const RandomFactoid = () => {
+  const [showFactoid, setShowFactoid] = useState(true);
+
   const getRandomFactoid = () => {
     const facts = [
       "We generate around 40 million tons of electronic waste every year, worldwide. That’s like throwing 800 laptops every second.",
@@ -24,11 +27,32 @@ const RandomFactoid = () => {
 
   const factoid = getRandomFactoid();
 
+  const handleCloseFactoid = () => {
+    setShowFactoid(false);
+  };
+
   return (
-    <div className="bg-primary p-4 rounded-lg shadow-lg mb-4">
-    <h2 className="text-4xl md:text-5xl text-stroke-heading pb-6">Did you Know?</h2>
-    <p className="text-2xl text-stroke-heading mb-2">{factoid}</p>
-    </div>
+    showFactoid && (
+      <div
+        className="bg-primary p-4 rounded-lg shadow-lg mb-4 relative border-4 border-white  "
+        style={{
+          position: 'fixed',
+          top: '40%', // Adjust this value to control the vertical position
+          left: '50%',
+          transform: 'translateX(-50%)',
+          zIndex: 9999, // Set a high z-index value to display above content
+        }}
+      >
+        <button
+          onClick={handleCloseFactoid}
+          className="absolute top-0 right-0 m-2 text-xl cursor-pointer"
+        >
+          <FaTimes color='white'></FaTimes>
+        </button>
+        <h2 className="text-4xl md:text-5xl text-stroke-heading pb-6">Did you Know?</h2>
+        <p className="text-2xl text-stroke-heading mb-2">{factoid}</p>
+      </div>
+    )
   );
 };
 
