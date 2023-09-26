@@ -10,7 +10,7 @@ const Login = () => {
       setShowPopup(true);
     }, []);
   return (
-    <div className='bg-secondary text-stroke-dark min-h-screen'> {/* Change h-screen to min-h-screen */}
+    <div className='bg-secondary text-stroke-dark min-h-screen font-Rubik'> {/* Change h-screen to min-h-screen */}
       <div className="flex flex-col md:flex-row items-center justify-center p-2 md:p-8">
         {/* Left Section */}
         <div className="flex-1 text-center md:text-6xl lg:text-8xl leading-normal mb-4 md:mb-0 p-8 ">

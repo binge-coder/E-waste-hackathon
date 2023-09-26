@@ -37,7 +37,7 @@ const Navbar = () => {
             <div className='flex items-center justify-between h-20'>
                 <div className='flex items-center'>
                     <Link to="/" className='text-white'>
-                        logo placeholder
+                        logo
                     </Link>
                 </div>
                 {/* navlinks */}

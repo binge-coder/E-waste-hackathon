@@ -3,7 +3,7 @@ import RandomFactoid from '../components/Factoid'; // Import the Factoid compone
 
 const About = () => {
   return (
-    <div>About</div>
+    <div className='font-Rubik'>About</div>
   )
 }
 

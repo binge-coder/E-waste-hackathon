@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+// const defaultTheme = require('tailwindcss/defaultTheme');
 export default {
   content: [
     "./index.html",
@@ -30,7 +31,7 @@ export default {
         }
       },
       fontFamily: {
-        alpha: 'Rubik'
+        Rubik: ['Rubik','sans-serif']
       }
     },
   },
