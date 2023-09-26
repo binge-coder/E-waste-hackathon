@@ -5,7 +5,7 @@ const Table = () => {
   const headingTextSize = 'text-sm';
 
   return (
-    <table className="table-auto text-white mx-auto mt-3">
+    <table className="table-auto text-white mx-auto mt-3 my-[198px]">
       <thead>
         <tr>
           <th className={`border px-4 py-2 ${headingTextSize}`}>S. No.</th>
