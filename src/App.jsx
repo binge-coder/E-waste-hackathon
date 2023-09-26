@@ -4,6 +4,7 @@ import Home from "./pages/Home"
 import Locate from "./pages/Locate"
 import Credit_Calc from "./pages/Credit_Calc"
 import About from "./pages/About"
+import Login from './pages/Login'
 
 
 // import './App.css'
@@ -16,6 +17,7 @@ function App() {
       <Routes>
         <Route path="/" Component={Home}/>
         <Route path="/locate" Component={Locate}/>
+        <Route path="/login" Component={Login}/>
         <Route path="/credit_calc" Component={Credit_Calc}/>
         <Route path="/about" Component={About}/>
       </Routes>
