@@ -1,6 +1,7 @@
 import React, { useLayoutEffect, useEffect, useState } from 'react';
 import Form from '../components/Form_Loc'; // Import the Form component
 import RandomFactoid from '../components/Factoid'; // Import the Factoid component
+import Table from '../components/Table_Loc'; // Import the Table component
 
 // const containerStyle = {
 //   width: '740px',
@@ -85,7 +86,7 @@ const Locate = () => {
   }, []);
   
   return (
-    <div className='bg-secondary md:flex md:items-center md:justify-center text-stroke-dark ' style={{ height: !isMobile ? largestDivHeight : '100%' }} >
+    <div className='bg-secondary md:flex md:items-center md:justify-center text-stroke-dark '  >
       <div className="flex flex-col md:flex-row items-center justify-center p-3 ">
         {/* Left Section */}
         <div className="flex-1 text-center md:text-6xl lg:text-8xl leading-normal mb-4 md:mb-0 p-2">
@@ -97,6 +98,7 @@ const Locate = () => {
             {/* Bottom two-thirds for the Form component */}
             <div>
               <Form />
+              <Table />
             </div>
           </div>
         </div>
