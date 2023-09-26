@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FaTimes } from "react-icons/fa"
+import { Fade } from 'react-awesome-reveal';
 
 const RandomFactoid = () => {
   const [showFactoid, setShowFactoid] = useState(true);
@@ -34,7 +35,7 @@ const RandomFactoid = () => {
   return (
     showFactoid && (
       <div
-        className="bg-primary p-4 rounded-3xl shadow-2xl shadow-black mb-4 relative border-4 border-white  "
+        className="bg-primary p-4 rounded-3xl shadow-2xl shadow-black mb-4 relative border-4 border-white"
         style={{
           position: 'fixed',
           top: '40%', // Adjust this value to control the vertical position
@@ -43,6 +44,7 @@ const RandomFactoid = () => {
           zIndex: 9999, // Set a high z-index value to display above content
         }}
       >
+      <Fade>
         <button
           onClick={handleCloseFactoid}
           className="absolute top-0 right-0 m-2 text-xl cursor-pointer"
@@ -51,6 +53,7 @@ const RandomFactoid = () => {
         </button>
         <h2 className="text-4xl md:text-5xl text-stroke-heading pb-6">Did you Know?</h2>
         <p className="text-2xl text-stroke-heading mb-2">{factoid}</p>
+        </Fade>
       </div>
     )
   );
