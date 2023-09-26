@@ -58,7 +58,7 @@ const Locate = () => {
   const [isMobile, setIsMobile] = useState(true)
  
   const handleResize = () => {
-    setIsMobile(window.innerWidth < 720);
+    setIsMobile(window.innerWidth < 768);
   };
 
   useLayoutEffect(() => {
