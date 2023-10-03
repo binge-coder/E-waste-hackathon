@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 
 const Form = () => {
   // State to manage form data
@@ -18,10 +19,17 @@ const Form = () => {
   };
 
   // Handle form submission
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     // You can implement form submission logic here, such as sending data to a server
-    console.log('Form data submitted:', formData);
+    try {
+      // Send a POST request with the form data
+      const response = await axios.post('/credit_calc', formData); // Replace '/your-api-endpoint' with your actual API endpoint
+      console.log('Form data submitted:', formData);
+      console.log('Server response:', response.data);
+    } catch (error) {
+      console.error('Error submitting form:', error);
+    }
   };
 
   return (

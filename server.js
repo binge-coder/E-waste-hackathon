@@ -61,6 +61,31 @@ app.post("/locate", (req, res) => {
     res.json({ message: "Form data received on the server" });
   });
 
+  app.post("/credit_calc", (req, res) => {
+    // Handle the data sent by the form
+    const formData = req.body;
+  
+    // You can now send this data to the "locate" component or do any other processing
+    // For now, just log the data
+    console.log("Form data received on the server:", formData);
+  
+    // Send a response back to the client (you can customize this response)
+    res.json({ message: "Form data received on the server" });
+  });
+
+  app.post("/login", (req, res) => {
+    // Handle the data sent by the form
+    const formData = req.body;
+  
+    // You can now send this data to the "locate" component or do any other processing
+    // For now, just log the data
+    console.log("Form data received on the server:", formData);
+  
+    // Send a response back to the client (you can customize this response)
+    res.json({ message: "Form data received on the server" });
+  });
+
+
 app.listen(PORT, () => {
   console.log();
   console.log(`  App running on port ${PORT}`);
