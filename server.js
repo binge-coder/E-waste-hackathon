@@ -1,6 +1,10 @@
 import express from "express";
 import { fileURLToPath } from 'url';
 import path from 'path';
+import mongoose from "mongoose";
+
+mongoose.connect('mongodb://127.0.0.1:27017/test')
+  .then(() => console.log('Connected!'));
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
