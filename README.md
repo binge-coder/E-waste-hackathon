@@ -27,7 +27,7 @@ http://localhost:5173/
 ## Side notes
 - I encourage anyone to edit this to make things easier for team members who are still having issues with collaborating
 
-Installing mongodb 
+## Installing mongodb 
 
 Refer to this video for installation
 
