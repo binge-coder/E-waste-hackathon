@@ -29,13 +29,16 @@ http://localhost:5173/
 
 ## Installing mongodb 
 
-Refer to this video for installation
+Refer to this this for installation
 
-https://www.youtube.com/watch?v=gB6WLkSrtJk
+- https://www.youtube.com/watch?v=gB6WLkSrtJk
+- https://medium.com/@LondonAppBrewery/how-to-download-install-mongodb-on-windows-4ee4b3493514
 
 ## these commands to run for running dev server
+```
 npm install
 npm i express
 npm i --save-dev nodemon
 npm i -g concurrently
 npm install axios
+```
