@@ -42,3 +42,5 @@ npm i --save-dev nodemon
 npm i -g concurrently
 npm install axios
 ```
+## The following command should be running in git bash
+mongod
