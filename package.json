@@ -15,7 +15,7 @@
     "axios": "^1.5.0",
     "concurrent": "^0.3.2",
     "express": "^4.18.2",
-    "mongoose": "^7.5.3",
+    "mongodb": "^6.1.0",
     "react": "^18.2.0",
     "react-awesome-reveal": "^4.2.5",
     "react-dom": "^18.2.0",

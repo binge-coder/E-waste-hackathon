@@ -1,10 +1,11 @@
 import express from "express";
 import { fileURLToPath } from 'url';
 import path from 'path';
-import mongoose from "mongoose";
+import { MongoClient } from "mongodb";
 
-mongoose.connect('mongodb://127.0.0.1:27017/test')
-  .then(() => console.log('Connected!'));
+const uri = "mongodb://0.0.0.0:27017";
+
+const client = new MongoClient(uri);
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -32,7 +33,7 @@ assetsRouter.get(videoRegex, (req, res) => {
 // Serve static files from the "public" directory
 app.use("/", express.static(path.join(__dirname, "public")));
 
-app.use(express.urlencoded({extended:true}));
+app.use(express.urlencoded({ extended: true }));
 
 // Use the assetsRouter for the "/assets" and "/src" routes
 app.use("/assets", assetsRouter);
@@ -54,40 +55,48 @@ app.get("/*", (_req, res) => {
 const { PORT = 5000 } = process.env;
 
 app.post("/locate", (req, res) => {
-    // Handle the data sent by the form
-    const formData = req.body;
-  
-    // You can now send this data to the "locate" component or do any other processing
-    // For now, just log the data
-    console.log("Form data received on the server:", formData);
-  
-    // Send a response back to the client (you can customize this response)
-    res.json({ message: "Form data received on the server" });
-  });
+  // Handle the data sent by the form
+  const formData = req.body;
 
-  app.post("/credit_calc", (req, res) => {
-    // Handle the data sent by the form
-    const formData = req.body;
-  
-    // You can now send this data to the "locate" component or do any other processing
-    // For now, just log the data
-    console.log("Form data received on the server:", formData);
-  
-    // Send a response back to the client (you can customize this response)
-    res.json({ message: "Form data received on the server" });
-  });
+  async function run() {
+    try {
+      const database = client.db('E-Waste');
+      const sign = database.collection('locate');
+      const tab = {city:formData['city'],country:'US'};
+      const datas = await sign.findOne(tab);
+      console.log(datas);
+      res.json({ message: "Form data received on the server" ,data:datas});
 
-  app.post("/login", (req, res) => {
-    // Handle the data sent by the form
-    const formData = req.body;
-  
-    // You can now send this data to the "locate" component or do any other processing
-    // For now, just log the data
-    console.log("Form data received on the server:", formData);
-  
-    // Send a response back to the client (you can customize this response)
-    res.json({ message: "Form data received on the server" });
-  });
+    } finally {
+      await client.close();
+    }
+  }
+  run().catch(console.dir);
+});
+
+app.post("/credit_calc", (req, res) => {
+  // Handle the data sent by the form
+  const formData = req.body;
+
+  // You can now send this data to the "locate" component or do any other processing
+  // For now, just log the data
+  console.log("Form data received on the server:", formData);
+
+  // Send a response back to the client (you can customize this response)
+  res.json({ message: "Form data received on the server" });
+});
+
+app.post("/login", (req, res) => {
+  // Handle the data sent by the form
+  const formData = req.body;
+
+  // You can now send this data to the "locate" component or do any other processing
+  // For now, just log the data
+  console.log("Form data received on the server:", formData);
+
+  // Send a response back to the client (you can customize this response)
+  res.json({ message: "Form data received on the server" });
+});
 
 
 app.listen(PORT, () => {
