@@ -44,3 +44,5 @@ npm install axios
 ```
 ## The following command should be running in git bash
 mongod
+
+##The dataset Should be imported in mongodb database with database name 'E-Waste' and collection name 'locate'
